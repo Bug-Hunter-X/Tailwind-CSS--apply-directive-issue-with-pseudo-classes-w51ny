@@ -1,0 +1,19 @@
+The solution is to avoid using `@apply` with pseudo-classes directly within a class definition.  Instead, apply the styles directly using Tailwind's utility classes within the element or move the hover styles outside of the @apply directive.
+
+```css
+.btn {
+  @apply bg-gray-300 px-4 py-2 rounded;
+}
+
+.btn:hover {
+  @apply bg-blue-500;
+}
+```
+
+Or
+
+```css
+.btn {
+  @apply bg-gray-300 px-4 py-2 rounded hover:bg-blue-500;
+}
+```
